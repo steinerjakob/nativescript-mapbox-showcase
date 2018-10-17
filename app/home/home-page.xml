@@ -1,0 +1,16 @@
+<Page class="page"
+    navigatingTo="onNavigatingTo"  
+    xmlns="http://schemas.nativescript.org/tns.xsd"
+    loaded="onPageLoaded">
+
+    <ActionBar class="action-bar">
+        <Label class="action-bar-title" text="Home"></Label>
+    </ActionBar>
+
+    <GridLayout>
+        <ContentView height="100%" width="100%" row="1">
+        <StackLayout height="100%" width="100%" id="mymapview">
+        </StackLayout>
+        </ContentView>
+    </GridLayout>
+</Page>
