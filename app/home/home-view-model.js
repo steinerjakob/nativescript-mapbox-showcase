@@ -25,9 +25,9 @@ function HomeViewModel() {
         self.mapbox.mapStyle = "streets";
         self.mapbox.height = "100%";
         self.mapbox.width = "100%";
-        self.mapbox.latitude = 48.130300;
-        self.mapbox.longitude = 15.271754;
-        self.mapbox.zoomLevel = 13;
+        self.mapbox.latitude = 48.201881;
+        self.mapbox.longitude = 15.634800;
+        self.mapbox.zoomLevel = 8;
         self.mapbox.showUserLocation = true;
         self.mapbox.disableRotation = "true";
         self.mapbox.disableTilt = "true";
