@@ -4,6 +4,7 @@ a code-behind file. The code-behind is a great place to place your view
 logic, and to set up your page’s data binding.
 */
 const applicationModule = require("tns-core-modules/application");
+const frameModule = require("ui/frame");
 
 const HomeViewModel = require("./home-view-model");
 let homeview;
@@ -22,6 +23,28 @@ exports.onPageLoaded = function (args) {
   if(homeview && !homeview.mapbox){
     homeview.addMap(args);
   }
+};
+
+exports.onNavigatedTo = function() {
+  if(homeview){
+    homeview.addMap();
+  }
+};
+
+exports.onNavigatingFrom = function(args) {
+  if(homeview){
+    homeview.removeMap();
+  }
+};
+
+exports.fabTap = function (args) {
+  frameModule.topmost().navigate({
+    moduleName: "second/second-page",
+    transition: {
+      name: "fade"
+    },
+    clearHistory: false
+  });
 };
 
 applicationModule.on(applicationModule.resumeEvent, function (args) {

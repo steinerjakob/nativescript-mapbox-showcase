@@ -1,0 +1,12 @@
+<Page class="page"
+  navigatingTo="onNavigatingTo"
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+      loaded="onPageLoaded">
+
+    <ActionBar class="action-bar">
+        <Label class="action-bar-title" text="Second"/>
+    </ActionBar>
+
+    <GridLayout rows="auto, *">
+    </GridLayout>
+</Page>

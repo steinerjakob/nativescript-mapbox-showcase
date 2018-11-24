@@ -1,16 +1,23 @@
 <Page class="page"
-    navigatingTo="onNavigatingTo"  
-    xmlns="http://schemas.nativescript.org/tns.xsd"
-    loaded="onPageLoaded">
+      navigatingTo="onNavigatingTo"
+      xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:FAB="nativescript-floatingactionbutton"
+      loaded="onPageLoaded"
+      navigatedTo="onNavigatedTo"
+      navigatingFrom="onNavigatingFrom">
 
     <ActionBar class="action-bar">
-        <Label class="action-bar-title" text="Home"></Label>
+        <Label class="action-bar-title" text="Home"/>
     </ActionBar>
 
-    <GridLayout>
+    <GridLayout rows="auto, *">
         <ContentView height="100%" width="100%" row="1">
         <StackLayout height="100%" width="100%" id="mymapview">
         </StackLayout>
         </ContentView>
+        <FAB:fab tap="fabTap"
+                 row="1"
+                 rippleColor="blue"
+                 class="fab-button bottom-right" />
     </GridLayout>
 </Page>
